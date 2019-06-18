@@ -17,9 +17,8 @@ If an incorrect guess is made, the game restarts.
 ### Links
 
 - [Github](https://fyeh0.github.io/react-clicky-game/)
-- [Heroku]()
 
-=================================================================================
+#
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

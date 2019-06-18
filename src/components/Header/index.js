@@ -19,11 +19,11 @@ import "./Header.css";
 
 // We use JSX curly braces to evaluate the style object
 
-function Header() {
+function Header(props) {
   return (
     <header className="header">
       <h1>clicky game!</h1>
-      <h2>score: </h2>
+      <h2>score: {props.score}</h2>
     </header>
   );
 }

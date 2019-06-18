@@ -8,8 +8,22 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    lastClicked: null,
+    score: 0,
+    highscore: 0,
+    // lastClicked: null
   };
+
+ shuffle = (array) => {
+    for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var shuffledArray = array[i];
+      array[i] = array[j];
+      array[j] = shuffledArray;
+    }
+    this.setState({ friends: array })
+    // console.log(array);
+  }
+
 
   // removeFriend = id => {
   //   // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -19,24 +33,36 @@ class App extends Component {
   // };
 
   onClick = id => {
-    console.log("click")
+    this.shuffle(this.state.friends);
+    
+    console.log("click");
+    const selected = [];
 
-    this.setState({ })
-  }
+    
+
+    // if (this.state.score === 0) {
+    //   this.setState({
+    //     shuffledArray: this.shuffle(this.state.friends),
+
+    //     score: this.state.score + 1
+    //   });
+    // }
+  };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
+
     return (
       <Wrapper>
-        <Header />
+        <Header score={this.state.score}/>
         {this.state.friends.map(friend =>
-            <FriendCard
-              // removeFriend={this.removeFriend}
-              key={friend.id}
-              id={friend.id}
-              image={friend.image}
-              onClick={this.onClick}
-            />
+          <FriendCard
+            // removeFriend={this.removeFriend}
+            key={friend.id}
+            id={friend.id}
+            image={friend.image}
+            onClick={this.onClick}
+          />
         )}
       </Wrapper>
     );
