@@ -1,3 +1,26 @@
+# React-Clicky-Game
+
+Office-themed memory application built with React for the Georgia Tech Full-Stack Web Development Program.
+
+### Overview
+
+The game renders different characters from cult tv classic "The Office" to the screen. Each image has an event listener that shuffles themselves in random order each time an image is clicked.
+
+The application keeps track of the user's score. The user's score increments when clicking an image for the first time, but resets to 0 if they click the same image more than once.
+
+If an incorrect guess is made, the game restarts.
+
+### Technologies Used
+
+- React
+
+### Links
+
+- [Github](https://fyeh0.github.io/react-clicky-game/)
+- [Heroku]()
+
+=================================================================================
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
